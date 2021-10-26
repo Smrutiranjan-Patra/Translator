@@ -4,16 +4,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('http://bit.ly/2gPLxZ4');
+  background-image: url("http://bit.ly/2gPLxZ4");
   background-repeat: no-repeat;
   background-size: cover;
 }
-#heading{
+#heading {
   color: white;
 }
 
 #translate_box {
-  background-color: rgba(255, 255, 255, .15);   
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0px 5px 5px 0px grey;
   backdrop-filter: blur(10px);
   width: 50%;
   height: 60%;
@@ -63,11 +64,17 @@ body {
   font-size: 2em;
   box-sizing: border-box;
   background-color: rgb(243, 243, 243);
+  box-shadow: inset 2px 2px 2px grey;
+}
+
+textarea {
+  border: none;
 }
 
 textarea:hover {
   background-color: #f6edf7;
 }
+
 
 #translate {
   width: 10em;
@@ -76,7 +83,10 @@ textarea:hover {
   padding: 1% 1% 2.5%;
   box-sizing: border-box;
 }
-#copy{
+#copy_button {
   color: white;
   margin: 10px;
+}
+#voice_button {
+  color: white;
 }

@@ -31,19 +31,19 @@ async function translate() {
                 .then((data) => {
                     var output = document.getElementById('output');
                     if (data.translatedText == undefined) {
-                        alert('Please Write Somethng');
+                        // alert('Please Write Somethng');
                         output.innerText = '';
                     } else {
                         output.innerText = data.translatedText;
                     }
                 })
         }).catch((err) => {
-            console.log('err', err);
+            // console.log('err', err);
         })
 
 }
 
-var copy = document.getElementById('copy');
+var copy = document.getElementById('copy_button');
 copy.addEventListener('click', copytext);
 
 function copytext() {
@@ -52,4 +52,16 @@ function copytext() {
     navigator.clipboard.writeText(text.value);
 }
 
+var voice_button = document.getElementById('voice_button');
+voice_button.addEventListener("click",voice);
 
+function voice() {
+    var recoginition = new webkitSpeechRecognition();
+    recoginition.lang = "en-GB";
+    recoginition.onresult = function (event) {
+        // console.log(event);
+        let input = document.getElementById('input');
+        input.innerText = event.results[0][0].transcript;
+    }
+    recoginition.start();
+}
