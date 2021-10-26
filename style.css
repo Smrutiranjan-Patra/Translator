@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 body {
   height: 98vh;
   width: 99vw;
@@ -8,14 +10,25 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#heading {
-  color: white;
+.header{
+  /* border: 1px solid red; */
+  width: 100%;  
+  margin-bottom: 5em;
+  padding: 0.3em;
+  box-sizing: border-box; 
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
 }
-
+#heading {
+  color: #3e1f47;
+  margin: 5px 0 5px 3%;
+  font-family: 'Rampart One', cursive;
+  font-size: 2.4em;
+}
 #translate_box {
   background-color: rgba(255, 255, 255, 0.15);
   box-shadow: inset 0px 5px 5px 0px grey;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px);
   width: 50%;
   height: 60%;
   padding: 1% 1%;
@@ -41,11 +54,15 @@ body {
   width: 100%;
   height: 2.5em;
   font-size: 1em;
+  font-family: 'Indie Flower';
+  font-weight: bold;
 }
 #output_language {
   width: 100%;
   height: 2.5em;
   font-size: 1em;
+  font-family: 'Indie Flower';
+  font-weight: bold;
 }
 #output_box {
   grid-area: b;
@@ -63,18 +80,16 @@ body {
   padding: 4%;
   font-size: 2em;
   box-sizing: border-box;
-  background-color: rgb(243, 243, 243);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
   box-shadow: inset 2px 2px 2px grey;
 }
 
 textarea {
   border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
 }
-
-textarea:hover {
-  background-color: #f6edf7;
-}
-
 
 #translate {
   width: 10em;
@@ -82,11 +97,15 @@ textarea:hover {
   font-size: 1em;
   padding: 1% 1% 2.5%;
   box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  font-weight: 300;
+  color: #b6ccfe;
 }
 #copy_button {
-  color: white;
+  color: #ff9e00;
   margin: 10px;
 }
 #voice_button {
-  color: white;
+  color: #dc2f02;
 }
