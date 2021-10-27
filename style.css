@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 body {
   height: 98vh;
   width: 99vw;
@@ -10,19 +10,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.header{
+.header {
   /* border: 1px solid red; */
-  width: 100%;  
+  width: 100%;
   margin-bottom: 5em;
   padding: 0.3em;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
 #heading {
   color: #3e1f47;
   margin: 5px 0 5px 3%;
-  font-family: 'Rampart One', cursive;
+  font-family: "Rampart One", cursive;
   font-size: 2.4em;
 }
 #translate_box {
@@ -54,14 +54,14 @@ body {
   width: 100%;
   height: 2.5em;
   font-size: 1.2em;
-  font-family: 'Indie Flower';
+  font-family: "Indie Flower";
   font-weight: bold;
 }
 #output_language {
   width: 100%;
   height: 2.5em;
   font-size: 1.2em;
-  font-family: 'Indie Flower';
+  font-family: "Indie Flower";
   font-weight: bold;
 }
 #output_box {
@@ -108,4 +108,42 @@ textarea {
 }
 #voice_button {
   color: #dc2f02;
+}
+
+@media only screen and (max-width: 480px) {
+  #translate_box {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0px 5px 5px 0px grey;
+    backdrop-filter: blur(50px);
+    width: 77%;
+    height: 68%;
+    padding: 4%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template:
+      "a"
+      "b"
+      "c";
+    gap: 7%;
+  }
+  #input_box {
+    grid-area: a;
+  }
+  #output_box {
+    grid-area: b;
+  }
+  #button_box {
+    grid-area: c;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .header {
+    width: 92%;
+    margin-bottom: 5 em;
+    padding: 0.3 em;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5 px);
+  }
 }
