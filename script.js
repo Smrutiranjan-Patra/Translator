@@ -31,14 +31,13 @@ async function translate() {
                 .then((data) => {
                     var output = document.getElementById('output');
                     if (data.translatedText == undefined) {
-                        // alert('Please Write Somethng');
                         output.innerText = '';
                     } else {
                         output.innerText = data.translatedText;
                     }
                 })
         }).catch((err) => {
-            // console.log('err', err);
+            console.log('err', err);
         })
 
 }
@@ -53,7 +52,7 @@ function copytext() {
 }
 
 var voice_button = document.getElementById('voice_button');
-voice_button.addEventListener("click",voice);
+voice_button.addEventListener("click", voice);
 
 function voice() {
     var recoginition = new webkitSpeechRecognition();
