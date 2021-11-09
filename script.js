@@ -1,4 +1,3 @@
-
 var button = document.getElementById('translate');
 button.addEventListener("click", translate);
 
